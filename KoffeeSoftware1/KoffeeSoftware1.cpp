@@ -47,10 +47,11 @@ int main()
 
             /* 
             
-            write memory example
+            read/write memory example
 
             int sampleValue;
             WriteProcessMemory(applicationHandle, (LPVOID)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
+            ReadProcessMemory(applicationHandle, (PBYTE*)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
 
             */
         }
