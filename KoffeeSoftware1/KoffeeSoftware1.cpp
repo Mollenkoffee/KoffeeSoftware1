@@ -3,9 +3,13 @@
 
 #include <iostream>
 #include <Windows.h>
+#include "csgo.h"
 
 using std::cout;
 using std::endl;
+
+using namespace netvars;
+using namespace signatures;
 
 // 1. Counter-Strike: Global Offensive - Direct3D 9
 LPCSTR applicationName = "Counter-Strike: Global Offensive - Direct3D 9";
@@ -55,6 +59,7 @@ int main()
 
             */
         }
+        CloseHandle(applicationHandle);
     }
     return 0;
 }
