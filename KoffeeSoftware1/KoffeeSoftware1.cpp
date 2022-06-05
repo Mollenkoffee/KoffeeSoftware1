@@ -11,11 +11,11 @@ using std::endl;
 using namespace netvars;
 using namespace signatures;
 
-// 1. Counter-Strike: Global Offensive - Direct3D 9
-LPCSTR applicationName = "Counter-Strike: Global Offensive - Direct3D 9";
-
 int main()
 {
+    // 1. Counter-Strike: Global Offensive - Direct3D 9
+    LPCSTR applicationName = "Counter-Strike: Global Offensive - Direct3D 9";
+
     cout << "-> KoffeeSoftware1" << endl;
 
     HWND applicationWindow = FindWindowA(NULL, applicationName);
@@ -48,21 +48,21 @@ int main()
         {
             cout << "-> processId found" << endl;
             cout << "-> " << processId << endl;
-
-            /* 
-            
-            read/write memory example
-
-            int sampleValue;
-            WriteProcessMemory(applicationHandle, (LPVOID)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
-            ReadProcessMemory(applicationHandle, (PBYTE*)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
-
-            */
         }
         CloseHandle(applicationHandle);
     }
     return 0;
 }
+
+/*
+
+read/write memory example
+
+int sampleValue;
+WriteProcessMemory(applicationHandle, (LPVOID)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
+ReadProcessMemory(applicationHandle, (PBYTE*)0x00AAAAAA, &sampleValue, sizeof(sampleValue), 0);
+
+*/
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
